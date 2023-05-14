@@ -21,6 +21,4 @@ function auth_middleware(req, res, next) {
     .catch(() => res.send({ message: "Could not authorize" }).status(403));
 }
 
-const auth = auth_middleware;
-
-exports.auth = auth;
+module.exports = auth_middleware;
